@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "dev2": "node --watch server.js"
+  },
+  "name": "pokedex",
+  "version": "1.0.0",
+  "main": "pokemon.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
