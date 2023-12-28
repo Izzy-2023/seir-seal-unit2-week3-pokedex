@@ -1,0 +1,92 @@
+* {
+    margin: 0 auto;
+  }
+  
+  nav {
+    color: rgb(30, 53, 145);
+    background-color: rgba(39, 93, 163, 0.529);
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cards {
+    margin-top: 2em;
+    width: 9em;
+    height: 10em;
+    background-color: rgba(39, 93, 163, 0.529);
+    border-radius: 1em;
+    text-align: center;
+  }
+  
+  .pokemon-img {
+    margin-top: 1em;
+    width: 7em;
+    height: 7em;
+    background-color: rgba(39, 93, 163, 0.529);
+  }
+  
+  .button {
+    display: inline-block;
+    padding-top: 2em;
+  }
+  
+  .add-button,
+  .submit-button {
+    margin-left: 3em;
+    margin-right: 1em;
+  }
+  
+  .newpage,
+  .editpage {
+    border: 0.1em solid rgba(39, 93, 163, 0.529);
+    padding: 0.2em;
+    margin: 0.2em;
+  }
+  
+  .editpage:focus,
+  .newpage:focus {
+    outline: 0;
+    border: 0.1em solid rgba(39, 93, 163, 0.529);
+    padding: 0.5em;
+  }
+  
+  .arrow {
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+  
+  .showcontainer,
+  .newcontainer,
+  .updatepage-container {
+    width: 20em;
+    height: 21em;
+    background-color: rgba(39, 93, 163, 0.529);
+    border-radius: 3em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .newcontainer h2,
+  .updatepage-container h2 {
+    padding-top: 2em;
+  }
+  #pokemon-img-showpage {
+    width: 15em;
+    height: 15em;
+    margin-top: 1em;
+  }
+  
+  #stats h4 {
+    margin: 1em;
+    padding-top: 1em;
+  }
+  
+  .button-showpage {
+    display: inline-block;
+    margin: 0.3em;
+  }
+  

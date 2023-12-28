@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Pokédex</title>
+    <script>
+        // function created to filter/search pokemons
+        function searchFunction(){
+            let txtValue;
+            let input = document.getElementById("search-pokemon");
+            let filter = input.value.toUpperCase();
+            let cardcontainer = document.getElementsByClassName("cards");
+            let card = document.getElementsByClassName("card");
+                for(i=0; i<cardcontainer.length; i++){
+                    h4 = card[i].getElementsByTagName("h4")[0];
+                    txtValue = h4.textContent;
+                    if (cardcontainer[i]) {
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            card[i].style.display= "";
+                        } else {
+                            card[i].style.display= "none";
+                        }
+                    }
+                }
+        }
+    </script>
+</head>
