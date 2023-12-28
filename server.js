@@ -50,11 +50,12 @@ app.get('/pokemon/new', (req, res) => {
 });
 
 // SHOW
-app.get('/pokemon/show', (req, res) => {
-    res.render('show.ejs', { Pokemon })
-});
-
-
+app.get("/pokemon/:id", (req, res) => {
+    res.render("show.ejs", {
+      index: req.params.id,
+      aPokemon: Pokemon[req.params.id]
+    });
+  });
 
 
 // ***************************

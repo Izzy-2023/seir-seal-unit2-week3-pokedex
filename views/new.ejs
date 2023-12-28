@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include("./partials/head.ejs") %>
 <body>
+    <%- include("./partials/header.ejs") %>
     <div class="new-pokemon">
     <h1>Add New Pokemon</h1>
 
@@ -13,7 +11,7 @@
         <input class="newpage" type="text" name="name" placeholder="Name"/>
         <input class="newpage" type="text" name="type" placeholder="Type"/>
         <input class="newpage" type="number" name="hp" placeholder="HP"/>
-        <input class="newpage" type="number" name="attack" placeholder="Attack"/>
+        <input class="newpage" type="number" name="attack" placeholder="Attack"/></br>
         <input class="newpage" type="number" name="defense" placeholder="Defense"/>
         <input class="newpage" type="number" name="spattack" placeholder="Spattack"/>
         <input class="newpage" type="number" name="spdefense" placeholder="Spdefense"/>
