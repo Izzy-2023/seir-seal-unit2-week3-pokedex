@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="new-pokemon">
     <h1>Add New Pokemon</h1>
+
+    <form action="/pokemon/" method="POST">
+        <input class="newpage" type="text" name="name" placeholder="Name"/>
+        <input class="newpage" type="text" name="type" placeholder="Type"/>
+        <input class="newpage" type="number" name="hp" placeholder="HP"/>
+        <input class="newpage" type="number" name="attack" placeholder="Attack"/>
+        <input class="newpage" type="number" name="defense" placeholder="Defense"/>
+        <input class="newpage" type="number" name="spattack" placeholder="Spattack"/>
+        <input class="newpage" type="number" name="spdefense" placeholder="Spdefense"/>
+        <input class="newpage" type="number" name="speed" placeholder="Speed"/><br/>
+        <input class="submit-button" type="submit" value="ADD POKEMON" />
+    </form>
+</div>
 </body>
 </html>

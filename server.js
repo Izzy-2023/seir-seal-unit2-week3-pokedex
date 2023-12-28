@@ -41,7 +41,12 @@ app.use(methodOverride("_method")) // lets us use DELETE PUT HTTP verbs
 
 // INDEX
 app.get('/pokemon', (req, res) => {
-    res.render('index.ejs', { Pokemon})
+    res.render('index.ejs', { data: Pokemon})
+});
+
+// NEW
+app.get('/pokemon/new', (req, res) => {
+    res.render('new.ejs', {Pokemon})
 });
 
 // SHOW
@@ -49,10 +54,7 @@ app.get('/pokemon/show', (req, res) => {
     res.render('show.ejs', { Pokemon })
 });
 
-// NEW
-app.get('/pokemon/new', (req, res) => {
-    res.render('new.ejs', {Pokemon})
-});
+
 
 
 // ***************************

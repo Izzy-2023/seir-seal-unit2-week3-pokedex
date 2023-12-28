@@ -8,13 +8,28 @@
 <body>
     <h1>Pokemon</h1>
 
-    <div class="pokemon-list">
 
-    <h2><%= Pokemon[1].name %></h2>
-    <h3><%= Pokemon[1].type  %></h3>
-    <h4><%= Pokemon[1].img %></h4>
 
+    <div>
+        <form class="button" action="/pokemon/new">
+            <input class="add-button" type="submit" value="ADD POKEMON"/>
+        </form>
+        <form class="button">
+            <input class="search-field" type="search" id="search-pokemon" onkeyup="searchFunction()" placeholder="Search for Pokémon">
+        </form>
     </div>
+        <div class="flex-container">
+            <% for(let i=0; i <data.length; i++){ %>
+                <div class="cards">
+                    <a href="/pokemon/<%= i %>">
+                        <div class="card">
+                            <img class="pokemon-img" src="<%=data[i].img%>">
+                            <h4><%=data[i].name%></h4>
+                        </div>
+                    </a>
+                </div>
+            <% } %>
+        </div>
 
 
 </body>
