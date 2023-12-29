@@ -3,8 +3,6 @@
 // DEPENDENCIES
 // *************************
 
-
-
 const Pokemon = [
   {
     id: "001",
