@@ -7,15 +7,24 @@
         <h2>Update Pokemon</h2>
         <img id="pokemon-img-showpage" src="<%=aPokemon.img%>" width="300px" />
     <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
-        <input class="editpage" type="text" name="name" value="<%= aPokemon.name %>"/>
-        <input class="editpage" type="text" name="img" value="<%= aPokemon.img %>" />
-        <input class="editpage" type="text" name="type" value="<%= aPokemon.type %>"/>
-        <input class="editpage" type="number" name="hp" value="<%= aPokemon.stats.hp %>"/>
-        <input class="editpage" type="number" name="attack" value="<%= aPokemon.stats.attack %>"/>
-        <input class="editpage" type="number" name="defense" value="<%= aPokemon.stats.defense %>"/>
-        <input class="editpage" type="number" name="spattack" value="<%= aPokemon.stats.spattack %>"/>
-        <input class="editpage" type="number" name="spdefense" value="<%= aPokemon.stats.spdefense %>"/>
-        <input class="editpage" type="number" name="speed" value="<%= aPokemon.stats.speed %>"/><br/>
+        <label>Name</label>
+        <input class="editpage" type="text" name="name" value="<%= aPokemon.name %>"/><br>
+        <label>Image URL</label>
+        <input class="editpage" type="text" name="img" value="<%= aPokemon.img %>" /><br>
+        <label>Type</label>
+        <input class="editpage" type="text" name="type" value="<%= aPokemon.type %>"/><br>
+        <label>HP</label>
+        <input class="editpage" type="number" name="hp" value="<%= aPokemon.stats.hp %>"/><br>
+        <label>Attack</label>
+        <input class="editpage" type="number" name="attack" value="<%= aPokemon.stats.attack %>"/><br>
+        <label>Defense</label>
+        <input class="editpage" type="number" name="defense" value="<%= aPokemon.stats.defense %>"/><br>
+        <label>Spattack</label>
+        <input class="editpage" type="number" name="spattack" value="<%= aPokemon.stats.spattack %>"/><br>
+        <label>Spdefense</label>
+        <input class="editpage" type="number" name="spdefense" value="<%= aPokemon.stats.spdefense %>"/><br>
+        <label>Speed</label>
+        <input class="editpage" type="number" name="speed" value="<%= aPokemon.stats.speed %>"/><br>
         <input class="submit-button" type="submit" value="UPDATE POKEMON" />
     </form>
 </div>

@@ -4,12 +4,14 @@
 require('dotenv').config(); // this is how we make use of our .env variables
 require("./config/db") // bring in our db config
 const express = require('express');
+const mongoose = require("mongoose")
+const app = express();
 const morgan = require("morgan") // logger
 const methodOverride = require("method-override")
-const app = express();
+
 const { PORT = 3013 } = process.env;
 
-const mongoose = require("mongoose")
+
 
 // Bring in our model
 const Pokemon = require('./models/pokemon');
@@ -83,23 +85,41 @@ app.get("/pokemon/:id/edit", (req, res) => {
   });
 
 // CREATE
-app.post("/pokemon", (req, res) => {
-    const newPokemon = {
-      name: req.body.name,
-      img: req.body.img,
-      type: req.body.type,
-      stats: {
-        hp: req.body.hp,
-        attack: req.body.attack,
-        defense: req.body.defense,
-        spattack: req.body.sattack,
-        spdefense: req.body.sdefense,
-        speed: req.body.speed
-      }
-    };
-    Pokemon.push(newPokemon);
-    res.redirect("/pokemon");
-  });
+// app.post("/pokemon", (req, res) => {
+//     const newPokemon = {
+//       name: req.body.name,
+//       img: req.body.img,
+//       type: req.body.type,
+//       stats: {
+//         hp: req.body.hp,
+//         attack: req.body.attack,
+//         defense: req.body.defense,
+//         spattack: req.body.spattack,
+//         spdefense: req.body.spdefense,
+//         speed: req.body.speed
+//       }
+//     };
+//     Pokemon.push(newPokemon);
+//     res.send(newPokemon);
+//   });
+
+app.post("/pokemon", async (req, res) => {
+    try {
+        if (req.body.completed === "on") {
+            // if checked
+            req.body.completed = true
+        } else {
+            // if not checked
+            req.body.completed = false
+        }
+    
+        let addedPokemon = await req.model.Pokemon.create(req.body)
+        res.redirect("/pokemon")
+
+    } catch (err) {
+        res.send(err)
+    }
+});
   
 
 // SHOW

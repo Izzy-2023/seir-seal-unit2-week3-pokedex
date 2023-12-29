@@ -2,6 +2,10 @@
     margin: 0 auto;
     background-color: rgb(235, 200, 25);
   }
+
+  body {
+    text-align: center;
+  }
   
   nav {
     color: rgb(30, 53, 145);
@@ -78,6 +82,7 @@
     border-radius: 3em;
     text-align: center;
     margin-bottom: 1em;
+    
   }
   .newcontainer h2,
   .updatepage-container h2 {
@@ -99,4 +104,16 @@
     margin: 0.3em;
   } 
   
+  .new-pokmon {
+    float: center;
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
 

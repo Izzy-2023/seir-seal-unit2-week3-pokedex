@@ -5,18 +5,29 @@
 <body>
     <%- include("./partials/header.ejs") %>
     <div class="new-pokemon">
-    <h1>Add New Pokemon</h1>
+    <h1>New Pokemon Page</h1><br><br>
 
     <form action="/pokemon/" method="POST">
-        <input class="newpage" type="text" name="name" placeholder="Name"/>
-        <input class="newpage" type="text" name="type" placeholder="Type"/>
-        <input class="newpage" type="number" name="hp" placeholder="HP"/>
-        <input class="newpage" type="number" name="attack" placeholder="Attack"/></br>
-        <input class="newpage" type="number" name="defense" placeholder="Defense"/>
-        <input class="newpage" type="number" name="spattack" placeholder="Spattack"/>
-        <input class="newpage" type="number" name="spdefense" placeholder="Spdefense"/>
-        <input class="newpage" type="number" name="speed" placeholder="Speed"/><br/>
+    <fieldset>
+        <legend>Add New Pokemon</legend>
+        <label>Name</label>
+        <input class="newpage" type="text" name="name"/>
+        <label>Type</label>
+        <input class="newpage" type="text" name="type"/>
+        <label>HP</label>
+        <input class="newpage" type="number" name="hp"/>
+        <label>Attack</label>
+        <input class="newpage" type="number" name="attack"/></br>
+        <label>Defense</label>
+        <input class="newpage" type="number" name="defense"/>
+        <label>Spattack</label>
+        <input class="newpage" type="number" name="spattack"/>
+        <label>Spdefense</label>
+        <input class="newpage" type="number" name="spdefense"/>
+        <label>Speed</label>
+        <input class="newpage" type="number" name="speed" /><br><br>
         <input class="submit-button" type="submit" value="ADD POKEMON" />
+    </fieldset>
     </form>
 </div>
 </body>
