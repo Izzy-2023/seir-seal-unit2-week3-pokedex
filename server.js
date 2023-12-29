@@ -54,7 +54,7 @@ app.delete("/pokemon/:id", (req, res) => {
     res.redirect("/pokemon");
   });
 
-// UPDATE ROUTE
+// UPDATE 
 app.put("/pokemon/:id", (req, res) => {
     const updatePokemon = {
       name: req.body.name,
@@ -80,6 +80,26 @@ app.get("/pokemon/:id/edit", (req, res) => {
       index: req.params.id
     });
   });
+
+// CREATE
+app.post("/pokemon", (req, res) => {
+    const newPokemon = {
+      name: req.body.name,
+      img: req.body.img,
+      type: req.body.type,
+      stats: {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.sattack,
+        spdefense: req.body.sdefense,
+        speed: req.body.speed
+      }
+    };
+    pokemon.push(newPokemon);
+    res.redirect("/pokemon");
+  });
+  
 
 // SHOW
 app.get("/pokemon/:id", (req, res) => {
