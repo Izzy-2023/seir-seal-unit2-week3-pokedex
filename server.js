@@ -50,7 +50,7 @@ app.get('/pokemon/new', (req, res) => {
 
 // DESTROY
 app.delete("/pokemon/:id", (req, res) => {
-    pokemon.splice(req.params.id, 1);
+    Pokemon.splice(req.params.id, 1);
     res.redirect("/pokemon");
   });
 
@@ -69,7 +69,7 @@ app.put("/pokemon/:id", (req, res) => {
         speed: req.body.speed
       }
     };
-    pokemon[req.params.id] = updatePokemon;
+    Pokemon[req.params.id] = updatePokemon;
     res.redirect(`/pokemon/${req.params.id}`);
   });
 
@@ -96,7 +96,7 @@ app.post("/pokemon", (req, res) => {
         speed: req.body.speed
       }
     };
-    pokemon.push(newPokemon);
+    Pokemon.push(newPokemon);
     res.redirect("/pokemon");
   });
   
