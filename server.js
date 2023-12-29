@@ -38,7 +38,6 @@ app.use(methodOverride("_method")) // lets us use DELETE PUT HTTP verbs
 // Routes
 // *************************
 
-
 // INDEX
 app.get('/pokemon', (req, res) => {
     res.render('index.ejs', { data: Pokemon})
@@ -49,7 +48,32 @@ app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs', {Pokemon})
 });
 
-// EDIT ROUTE
+// DESTROY
+app.delete("/pokemon/:id", (req, res) => {
+    pokemon.splice(req.params.id, 1);
+    res.redirect("/pokemon");
+  });
+
+// UPDATE ROUTE
+app.put("/pokemon/:id", (req, res) => {
+    const updatePokemon = {
+      name: req.body.name,
+      img: req.body.img,
+      type: req.body.type,
+      stats: {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.sattack,
+        spdefense: req.body.sdefense,
+        speed: req.body.speed
+      }
+    };
+    pokemon[req.params.id] = updatePokemon;
+    res.redirect(`/pokemon/${req.params.id}`);
+  });
+
+// EDIT 
 app.get("/pokemon/:id/edit", (req, res) => {
     res.render("edit.ejs", {
       aPokemon: Pokemon[req.params.id],
