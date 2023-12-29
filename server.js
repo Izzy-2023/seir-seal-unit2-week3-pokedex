@@ -49,6 +49,14 @@ app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs', {Pokemon})
 });
 
+// EDIT ROUTE
+app.get("/pokemon/:id/edit", (req, res) => {
+    res.render("edit.ejs", {
+      aPokemon: Pokemon[req.params.id],
+      index: req.params.id
+    });
+  });
+
 // SHOW
 app.get("/pokemon/:id", (req, res) => {
     res.render("show.ejs", {
@@ -56,6 +64,7 @@ app.get("/pokemon/:id", (req, res) => {
       aPokemon: Pokemon[req.params.id]
     });
   });
+
 
 
 // ***************************
