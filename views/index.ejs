@@ -2,14 +2,35 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
     <%- include("./partials/header.ejs") %>
-<body>
 
+<body>
+    <script>
+        // function to filter and search pokemon
+        function searchFunction(){
+            let txtValue;
+            let input = document.getElementById("search-pokemon");
+            let filter = input.value.toUpperCase();
+            let cardcontainer = document.getElementsByClassName("cards");
+            let card = document.getElementsByClassName("card");
+                for(i=0; i<cardcontainer.length; i++){
+                    h4 = card[i].getElementsByTagName("h4")[0];
+                    txtValue = h4.textContent;
+                    if (cardcontainer[i]) {
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            card[i].style.display= "";
+                        } else {
+                            card[i].style.display= "none";
+                        }
+                    }
+                }
+        }
+    </script>
     <div>
-        <form class="button" action="/pokemon/new">
-            <input class="add-button" type="submit" value="ADD POKEMON"/>
-        </form>
         <form class="button">
             <input class="search-field" type="search" id="search-pokemon" onkeyup="searchFunction()" placeholder="Search for Pokémon">
+        </form><br>
+        <form class="button" action="/pokemon/new">
+            <input class="add-button" type="submit" value="ADD POKEMON"/>
         </form>
     </div>
         <div class="flex-container">

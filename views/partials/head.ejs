@@ -1,28 +1,10 @@
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
     <title>Pokédex</title>
-    <script>
-        // function to filter and search pokemon
-        function searchFunction(){
-            let txtValue;
-            let input = document.getElementById("search-pokemon");
-            let filter = input.value.toUpperCase();
-            let cardcontainer = document.getElementsByClassName("cards");
-            let card = document.getElementsByClassName("card");
-                for(i=0; i<cardcontainer.length; i++){
-                    h4 = card[i].getElementsByTagName("h4")[0];
-                    txtValue = h4.textContent;
-                    if (cardcontainer[i]) {
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            card[i].style.display= "";
-                        } else {
-                            card[i].style.display= "none";
-                        }
-                    }
-                }
-        }
-    </script>
 </head>

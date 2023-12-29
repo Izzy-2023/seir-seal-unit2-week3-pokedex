@@ -33,6 +33,7 @@ app.use((req, res, next) => {
 app.use(morgan("dev")) // logging
 app.use(express.urlencoded({ extended: true })) // body parser, this is how we get access to req.body
 app.use(methodOverride("_method")) // lets us use DELETE PUT HTTP verbs
+app.use("/public", express.static("public")) // server up our public directory 
 
 // *************************
 // Routes
@@ -64,8 +65,8 @@ app.put("/pokemon/:id", (req, res) => {
         hp: req.body.hp,
         attack: req.body.attack,
         defense: req.body.defense,
-        spattack: req.body.sattack,
-        spdefense: req.body.sdefense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
         speed: req.body.speed
       }
     };

@@ -1,11 +1,11 @@
 * {
     margin: 0 auto;
-    background-color: blue;
+    background-color: rgb(235, 200, 25);
   }
   
   nav {
     color: rgb(30, 53, 145);
-    background-color: rgba(39, 93, 163, 0.529);
+    background-color: rgba(219, 12, 1, 0.529);
     padding: 1em;
     text-align: center;
   }
@@ -13,6 +13,7 @@
   .flex-container {
     display: flex;
     flex-wrap: wrap;
+    
   }
   
   .cards {
@@ -32,14 +33,26 @@
   }
   
   .button {
-    display: inline-block;
-    padding-top: 2em;
+    display: block;
+    width: 50%; 
+    margin: 1em auto;
+    padding: 0.5em;
+    font-size: 1.2em; 
+    background-color: rgb(39, 93, 163); 
+    color: black;
+    border: solid 2px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
   }
   
   .add-button,
   .submit-button {
     margin-left: 3em;
     margin-right: 1em;
+    align-items: center;
+ 
   }
   
   .newpage,
@@ -54,11 +67,6 @@
     outline: 0;
     border: 0.1em solid rgba(39, 93, 163, 0.529);
     padding: 0.5em;
-  }
-  
-  .arrow {
-    margin-top: 2em;
-    margin-left: 2em;
   }
   
   .showcontainer,
@@ -89,5 +97,6 @@
   .button-showpage {
     display: inline-block;
     margin: 0.3em;
-  }
+  } 
   
+

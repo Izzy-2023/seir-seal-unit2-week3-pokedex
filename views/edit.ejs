@@ -5,6 +5,7 @@
     <%- include("./partials/header.ejs") %>
     <div class="updatepage-container">
         <h2>Update Pokemon</h2>
+        <img id="pokemon-img-showpage" src="<%=aPokemon.img%>" width="300px" />
     <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
         <input class="editpage" type="text" name="name" value="<%= aPokemon.name %>"/>
         <input class="editpage" type="text" name="img" value="<%= aPokemon.img %>" />
@@ -21,3 +22,4 @@
     
 </body>
 </html>
+
