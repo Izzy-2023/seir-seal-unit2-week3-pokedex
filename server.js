@@ -14,7 +14,7 @@ const { PORT = 3013 } = process.env;
 
 
 // Bring in our model
-const Pokemon = require('./models/pokedb');
+const Pokemon = require('./src/pokemon');
 
 // ***************************
 // MIDDLEWARE
@@ -22,7 +22,7 @@ const Pokemon = require('./models/pokedb');
 
 app.use((req, res, next) => {
     req.model = {
-        Pokemon
+       Pokemon
 
     }
         console.log("this is middleware")
