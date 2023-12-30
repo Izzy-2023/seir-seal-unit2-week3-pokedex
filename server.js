@@ -14,7 +14,7 @@ const { PORT = 3013 } = process.env;
 
 
 // Bring in our model
-const Pokemon = require('./src/pokemon');
+const Pokemon = require('./models/pokemon');
 
 // ***************************
 // MIDDLEWARE
