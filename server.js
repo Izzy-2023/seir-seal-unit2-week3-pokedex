@@ -14,7 +14,7 @@ const { PORT = 3013 } = process.env;
 
 
 // Bring in our model
-const Pokemon = require('./src/pokemon');
+const Pokemon = require('./models/pokedb');
 
 // ***************************
 // MIDDLEWARE
@@ -85,42 +85,24 @@ app.get("/pokemon/:id/edit", (req, res) => {
   });
 
 // CREATE
-// app.post("/pokemon", (req, res) => {
-//     const newPokemon = {
-//       name: req.body.name,
-//       img: req.body.img,
-//       type: req.body.type,
-//       stats: {
-//         hp: req.body.hp,
-//         attack: req.body.attack,
-//         defense: req.body.defense,
-//         spattack: req.body.spattack,
-//         spdefense: req.body.spdefense,
-//         speed: req.body.speed
-//       }
-//     };
-//     Pokemon.push(newPokemon);
-//     res.send(newPokemon);
-//   });
+app.post("/pokemon", (req, res) => {
+    const newPokemon = {
+      name: req.body.name,
+      img: req.body.img,
+      type: req.body.type,
+      stats: {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed
+      }
+    };
+    Pokemon.push(newPokemon);
+    res.send(newPokemon);
+  });
 
-app.post("/pokemon", async (req, res) => {
-    try {
-        if (req.body.completed === "on") {
-            // if checked
-            req.body.completed = true
-        } else {
-            // if not checked
-            req.body.completed = false
-        }
-    
-        let addedPokemon = await req.model.Pokemon.create(req.body)
-        res.redirect("/pokemon")
-
-    } catch (err) {
-        res.send(err)
-    }
-});
-  
 
 // SHOW
 app.get("/pokemon/:id", (req, res) => {
