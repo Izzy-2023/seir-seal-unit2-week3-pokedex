@@ -3,30 +3,34 @@
     <%- include("./partials/head.ejs") %>
 <body>
     <%- include("./partials/header.ejs") %>
-    <div class="updatepage-container">
-        <h2>Update Pokemon</h2>
+    <div class="editpage">
+        <h2><%= aPokemon.name %></h2>
         <img id="pokemon-img-showpage" src="<%=aPokemon.img%>" width="300px" />
-    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
-        <label>Name</label>
-        <input class="editpage" type="text" name="name" value="<%= aPokemon.name %>"/><br>
-        <label>Image URL</label>
-        <input class="editpage" type="text" name="img" value="<%= aPokemon.img %>" /><br>
-        <label>Type</label>
-        <input class="editpage" type="text" name="type" value="<%= aPokemon.type %>"/><br>
-        <label>HP</label>
-        <input class="editpage" type="number" name="hp" value="<%= aPokemon.stats.hp %>"/><br>
-        <label>Attack</label>
-        <input class="editpage" type="number" name="attack" value="<%= aPokemon.stats.attack %>"/><br>
-        <label>Defense</label>
-        <input class="editpage" type="number" name="defense" value="<%= aPokemon.stats.defense %>"/><br>
-        <label>Spattack</label>
-        <input class="editpage" type="number" name="spattack" value="<%= aPokemon.stats.spattack %>"/><br>
-        <label>Spdefense</label>
-        <input class="editpage" type="number" name="spdefense" value="<%= aPokemon.stats.spdefense %>"/><br>
-        <label>Speed</label>
-        <input class="editpage" type="number" name="speed" value="<%= aPokemon.stats.speed %>"/><br>
-        <input class="submit-button" type="submit" value="UPDATE POKEMON" />
-    </form>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST"><br>
+
+        <fieldset>
+            <legend>Edit Pokemon</legend>
+            <label>Name</label>
+            <input class="newpage" type="text" name="name" value="<%= aPokemon.name %>" />
+            <label>Image URL</label>
+            <input class="newpage" type="text" name="img" value="<%= aPokemon.img %>" />
+            <label>Type</label>
+            <input class="newpage" type="text" name="type" value="<%= aPokemon.type %>" /><br>
+            <label>HP</label>
+            <input class="newpage" type="number" name="hp" value="<%= aPokemon.stats.hp %>" />
+            <label>Attack</label>
+            <input class="newpage" type="number" name="attack" value="<%= aPokemon.stats.attack %>"/>
+            <label>Defense</label>
+            <input class="newpage" type="number" name="defense" value="<%= aPokemon.stats.defense %>" /><br>
+            <label>Spattack</label>
+            <input class="newpage" type="number" name="spattack"value="<%= aPokemon.stats.spattack %>" />
+            <label>Spdefense</label>
+            <input class="newpage" type="number" name="spdefense" value="<%= aPokemon.stats.spdefense %>" />
+            <label>Speed</label>
+            <input class="newpage" type="number" name="speed" value="<%= aPokemon.stats.speed %>" /><br><br>
+            <input class="submit-button" type="submit" value="UPDATE POKEMON" />
+        </fieldset>
+        </form>
 </div>
     
 </body>
