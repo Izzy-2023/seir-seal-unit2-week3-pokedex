@@ -9,7 +9,7 @@ const app = express();
 const morgan = require("morgan") // logger
 const methodOverride = require("method-override")
 
-const { PORT = 3013 } = process.env;
+const { PORT = 3000 } = process.env;
 
 
 
@@ -22,7 +22,7 @@ const Pokemon = require('./models/pokemon');
 
 app.use((req, res, next) => {
     req.model = {
-       Pokemon
+       Pokemon,
 
     }
         console.log("this is middleware")
@@ -103,7 +103,6 @@ app.post("/pokemon", (req, res) => {
     res.send(newPokemon);
   });
 
-
 // SHOW
 app.get("/pokemon/:id", (req, res) => {
     res.render("show.ejs", {
@@ -111,8 +110,6 @@ app.get("/pokemon/:id", (req, res) => {
       aPokemon: Pokemon[req.params.id]
     });
   });
-
-
 
 // ***************************
 // SERVER LISTENER

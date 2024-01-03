@@ -17,7 +17,7 @@
   },
   "name": "pokedex",
   "version": "1.0.0",
-  "main": "pokemon.js",
+  "main": "server.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
