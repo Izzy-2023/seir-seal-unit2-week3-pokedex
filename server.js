@@ -2,7 +2,6 @@
 // Dependecies
 // ***********************************
 require('dotenv').config(); // this is how we make use of our .env variables
-require("./config/db") // bring in our db config
 const express = require('express');
 const mongoose = require("mongoose")
 const app = express();

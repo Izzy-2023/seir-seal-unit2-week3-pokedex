@@ -7,9 +7,11 @@
     <div class="new-pokemon">
     <h1>New Pokemon Page</h1><br><br>
 
-    <form action="/pokemon/" method="POST">
+    <form action="/pokemon" method="POST">
     <fieldset>
         <legend>Add New Pokemon</legend>
+        <label>Image URL</label>
+        <input class="newpage" type="text" name="img" value="<%= Pokemon.img %>" />
         <label>Name</label>
         <input class="newpage" type="text" name="name"/>
         <label>Type</label>
